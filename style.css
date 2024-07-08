@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::selection {
+    background: salmon;
+}
+
+body{
+    transition:background-color ease-out .5s
+}
+
+:root {
+    --salmon: #EF9D71;
+    --black: #000;
+    --white: #fff;
+    --cyan: #AEDEE0;
+    --dark-salmon: #532521;
+    --dark-cyan: #1f2f32;
+}
+.video-div{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+body[theme="black"] {
+    background: var(--black);
+}
+
+body[theme="black"] .section {
+    color: var(--white);
+}
+
+body[theme="cyan"] {
+    background: var(--cyan);
+}
+
+body[theme="cyan"] .section {
+    color: var(--dark-cyan);
+}
+
+body[theme="salmon"] {
+    background: var(--salmon);
+}
+
+body[theme="salmon"] .section {
+    color: var(--black);
+}
+
+body[theme="white"] {
+    background: var(--white);
+}
+
+body[theme="white"] .section {
+    color: var(--black);
+}
